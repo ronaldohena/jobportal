@@ -1,0 +1,25 @@
+Tani jemi te gjithe antare te repository tone te projektit.Si fillim secili do marri folder e projektit ne github.
+Hapi "CMD"(Windows) ose "Terminal"(Ubuntu/Mac Os) dhe shkoni ne Desktop(Ose ne folderin qe doni ta vendosni folderin).
+Me pas shkruani kete komand "git clone https://github.com/2Reldi/MRBR-Html.git"(Mund tju kerkoj te vendosni email dhe password).
+(Kujdes ky proces behet vetem heren e pare).
+
+Me pas gjate punes, pasi dikush ben nje detyre i ruan ndryshimet ne git.Per te ruajtur ndryshimet ndiqen keto hapa.
+1.Hapi "CMD"(Windows) ose "Terminal"(Ubuntu/Mac Os) dhe shkoni ne folderin e projektit.
+2.Mbledhim ndryshimet.Komanda: git add .
+3.Ruajme ndryshimet lokalisht.Komanda: git commit -m "Nje mesazh i shkurter per ndryshimet qe kemi bere"
+4.Marrim ndryshimet e bera nga te tjeret ne projektin online. Komanda: git pull origin master 
+5.Mbledhim ndryshimet e te tjereve.Komanda: git add .
+6.Ruajme ndryshimet e te tjereve lokalisht.Komanda: git commit -m "I njejti mesazh si tek pika 3"
+7.Ruajme ndryshimet tona projektin online.Komanda: git push -u origin master
+(Ky proces behet sa here mbarojme nje detyre dhe e hedhim online)
+
+Git eshte pak kompleks ne fillim dhe ju sugjeroj te shikoni kete tutorial te shkurter sa per tu njohur. "https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners"
+
+Gjithashtu gjate punes do ju dalin "merge conflicts".Nese 2 antare ose me shume punojne ne te njejtin file do ndodhi qe kodi do ket perplasje sepse shkruhet ne te njetat rreshta dy gjera te ndryshme.
+"merge conflicts" jane gjera do ndodhin dhe ne momentin qe do ndodhi duhet te flisni me personin tjeter qe ka shkruar ne ate file dhe te vendosni se kodi i kujt antari duhet mbajtur.
+https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png
+Ne fund duhet te zgjidhni nje nga opsionet si ne foto, "Accept Incoming", "Accept Current", "Accept Both";
+Shikoni kete tutorial per "merge conflicts" "https://imagej.net/Git_Conflicts".
+
+P.S
+github.txt do jet ne folderin e projektit nen folderin info

@@ -1,0 +1,12 @@
+export { default as ForgetLogin } from "./ForgetLogin/ForgetLogin";
+export { default as ForgetPassword } from "./ForgetPassword/ForgetPassword";
+export { default as Home } from "./Home/Home";
+export { default as Njoftime } from "./Njoftime/Njoftime";
+export { default as NjoftimPune } from "./NjoftimPune/NjoftimPune";
+export { default as Postim } from "./Postim/Postim";
+export { default as Profil } from "./Profil/Profil";
+export { default as SingInForm } from "./SingInForm/SingInForm";
+export { default as SingUpForm } from "./SingUpForm/SingUpForm";
+export { default as Switch } from "./Switch/Switch";
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as Pershkrimi } from "./Pershkrimi/Pershkrimi";

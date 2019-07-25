@@ -1,0 +1,26 @@
+button{
+    height: 50px;
+    width: 140px;
+    color:black;
+    background-color: white;
+    border-radius: 5%;
+    margin-left: 8%;
+    font-size: 20px;
+  }
+
+  button:hover { 
+    background-color:rgb(66, 171, 231);
+  }
+  
+
+  .buton-style {
+  
+    background-color: rgb(66, 171, 231);
+    color: white;
+  }
+
+  .butonn {
+      margin-top: 3%;
+      margin-left: 5%;
+  }
+

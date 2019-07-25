@@ -1,0 +1,52 @@
+.profil8{
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 0%;
+    height:999px;
+    border: solid ;
+    border-color: #f8f9fa;
+    box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
+    padding: 20px 30px;
+
+
+}
+.back8{
+background-color: #03a9f4;
+width: 79px;
+height: 36px;
+margin-left: 250px;
+color: white;
+margin-bottom: 20px;
+border-radius: 4px;
+border-color: #03a9f4;
+}
+.logo8{
+  width:100%;
+  height: 400px;
+  opacity: 0.2;
+}
+.error8{
+  margin-bottom: 10px;
+  color: #cc0000;
+}
+
+.form-emri{
+  height: 50px;
+  width: 350px;
+  padding: 10px 40px;
+  border: solid ;
+  border-color : #f8f9fa;
+  margin-right: 80%;
+  border-radius: 9px;
+}
+.margin8{
+  height: 40px;
+  width: 100px;
+  font-size: 12px;
+  color: white;
+  background-color: #03a9f4;
+  border-radius: 9px;
+  
+  border-color: #03a9f4;
+}
+

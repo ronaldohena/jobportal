@@ -1,0 +1,55 @@
+.form4{
+  height: 50px;
+  width: 350px;
+  padding: 10px 40px;
+  border: solid ;
+  border-color : #f8f9fa;
+  margin-right: 80%;
+  border-radius: 9px;
+  margin-left: 9%;
+}
+.back2{
+  height: 47px;
+  width: 75px;
+  margin-left: 15%;
+  margin-top: 30%;
+  border-color: white;
+  border-radius: 5px;
+  background-color: white;
+  border:solid;}
+
+  .submit2{
+    height:47px;
+     width: 80px;
+     margin-top: 30%;
+     margin-left: 37%;
+     border-radius: 6px;
+     color: white;
+     background-color: #03a9f4;
+     border-color: #03a9f4;
+}
+
+.center4{
+  margin-left: 50%;
+  margin-top: 10%;
+  padding-top: 5%;
+    padding-bottom: 5%;
+    width: 450px;
+    height: 400px;
+    border: solid ;
+    border-color: #f8f9fa;
+    box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
+}
+.error4{
+  font-size: 18px;
+  color:red;
+  margin-left: 10%;
+}
+.em2{
+  margin-left: 10%;
+  font-size: 24px;
+}
+.foto4{
+  height: 900px;
+  width: 900px;;
+}

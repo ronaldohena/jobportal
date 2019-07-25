@@ -1,0 +1,19 @@
+Tani te gjithe ndodhemi ne dashboard e projektit tone ne trello.Aty ndodhen disa kolona qe kane te bejne me ecurine e punes.
+Secila kolone do te kete disa card qe eshte nje pune e caktuar qe mund te levizi nga njera kolone ne tjere.
+
+Kolona e pare do te jete "To Do".Ne kete kolone do te jene gjerat qe duhen bere hap pas hapi.
+
+Kolona e dyte do te jete "Doing".Secili nga ne do shikoje nje card ne "To Do" dhe do e kaloj ne kolonen "Doing" dhe do vendosi veten e vete si member brenda nje card.
+Kjo do te thote qe ai antar i grupit po merret me ate detyre te projektit qe thote card.
+
+Kolona e trete do te jete "Finished".Ne momentin qe antari perfundon detyren qe eshte shkruar ne card ai kalon card perkates nga "Doing" ne "Finished".
+
+Kolona e katert do te jete "Done(Approved)".Pasi te verifikohen qe detyrat ne finished jane bere ne rregull card do kaloj nga "Finished" ne "Done(Approved)".
+
+Kolona e peste do te jete "Bugs".Nese secili prej antareve gjen nje problem ne faqe krijon nje karte te re ku shpjegon problemin dhe vendos nje screenshot.
+Me pas dikush nga antaret qe merr persiper ta rregulloj kete Bug e kalon ne kolonen "Doing" me te njejtin proces si me te "To do"
+
+Kolona e gjashte "UI fixes".Eshte e njejta gje si kolona "Bugs", por ne kete kolone do vendosen vetem probleme qe kane te bejne me UI, kur dicka nuk ngjan bukur.
+
+Ne kolonen "To Do" do jem une qe do krijoj cards dhe gjithashtu un do kaloj nga "Finished" ne "Done(Approved)".
+Ne kolonen 5, 6 secili prej nesh mund te shtoj cards nese gjen nje problem.

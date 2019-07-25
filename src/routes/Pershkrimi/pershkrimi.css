@@ -1,0 +1,26 @@
+.poz1{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+ol{
+    margin: 0.5%;
+}
+
+.tip-button{
+        height: 50px;
+        width: 140px;
+        color: white;
+        background-color: #03a9f4;
+        border-radius: 9px;
+        border:solid;
+        border-color: #03a9f4;
+}
+
+
+.foto-style{
+    height: 500px;
+    width: 100%;
+}
