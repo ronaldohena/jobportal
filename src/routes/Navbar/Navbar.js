@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import styled from 'styled-components';
 
 import * as actions from "../../redux/actions";
 import "./navbar.css";
@@ -14,57 +15,59 @@ class Navbar extends Component {
     const isLoggedIn = Object.keys(user).length !== 0 && tokenId !== null;
 
     return (
-      <div className="butonn">
+      <MainDiv>
         <NavLink to="/home">
-          <button style={{ marginRight: "1%" }}>Kryefaqja</button>
+          <LeftButton>Kryefaqja</LeftButton>
         </NavLink>
         <NavLink to="/njoftimepune">
-          <button style={{ marginRight: "1%" }} onClick={this.search}>
+          <LeftButton onClick={this.search}>
             Njoftimet
-          </button>
+          </LeftButton>
         </NavLink>
         {isLoggedIn ? (
           <NavLink to="/postim">
-            <button
-              style={{ float: "right", marginRight: "3%" }}
-              className="buton-style"
-            >
-              Posto Njoftim
-            </button>
+            <RightButton>Posto Njoftim</RightButton>
           </NavLink>
         ) : (
           <NavLink to="/sing-in">
-            <button
-              style={{ float: "right", marginRight: "3%" }}
-              className="buton-style"
-            >
-              Kyçu
-            </button>
+            <RightButton>Kyçu</RightButton>
           </NavLink>
         )}
 
         {isLoggedIn ? (
-          <button
-            style={{ float: "right", marginRight: "3%" }}
-            className="buton-style"
-            onClick={() => this.props.logout()}
-          >
+          <RightButton onClick={() => this.props.logout()}>
             Dil
-          </button>
+          </RightButton>
         ) : (
           <NavLink to="/sing-up">
-            <button
-              style={{ float: "right", marginRight: "1%" }}
-              className="buton-style"
-            >
-              Regjistrohu
-            </button>
+            <RightButton>Regjistrohu</RightButton>
           </NavLink>
         )}
-      </div>
+      </MainDiv>
     );
   }
 }
+
+const LeftButton = styled.button`
+  margin-left: 1%;
+  font-size: 20px;
+`
+const RightButton = styled.button`
+  float: right;
+  font-size: 20px;
+  margin-right: 3%;
+  background-color: rgb(66, 171, 231);
+  color: white;
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+`
+
+const MainDiv = styled.div`
+  padding-top: 3%;
+  margin-left: 5%;
+`
 
 const mapStateToProps = ({ auth }) => ({
   user: auth.user,

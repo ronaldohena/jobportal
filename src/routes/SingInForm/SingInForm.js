@@ -1,24 +1,26 @@
 import React, { Component } from "react";
-import { BrowserRouter as NavLink, Link, Redirect } from "react-router-dom";
+//import { BrowserRouter as NavLink, Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import * as actions from "../../redux/actions";
-import "./singin.css";
+
+
+import styled from 'styled-components';
 
 class SingInForm extends Component {
   constructor() {
     super();
     this.state = { fields: {}, errors: {} };
     this.handleChange = this.handleChange.bind(this);
-    this.submituserRegistrationForm = this.submituserRegistrationForm.bind(
-      this
-    );
+    this.submituserRegistrationForm = this.submituserRegistrationForm.bind(this);
   }
+
   handleChange(e) {
     let fields = this.state.fields;
     fields[e.target.name] = e.target.value;
     this.setState({ fields });
   }
+
   submituserRegistrationForm(e) {
     e.preventDefault();
     if (this.validateForm()) {
@@ -39,6 +41,7 @@ class SingInForm extends Component {
       );
     }
   }
+
   validateForm() {
     let fields = this.state.fields;
     let errors = {};
@@ -82,61 +85,136 @@ class SingInForm extends Component {
     this.setState({ errors: errors });
     return formIsValid;
   }
+
+
   render() {
     const foto = {
       width: "100%",
-      height: "800px",
+      height: "700px",
       backgroundImage: "url(" + require("../../assets/images/foto.jpg") + ")"
     };
 
     return (
-      <div className="center12" style={foto}>
-        <div className="center3">
-          <h3 className="sing3">Kyçu</h3>
+      <MainDiv style={foto}>
+        <Forma>
+          <h3 
+            style={{ 
+              marginLeft: '40%', 
+              fontSize: '35px', 
+              fontFamily: 'Bitter',
+              textTransform: 'uppercase'
+            }} 
+            className="sing3">Kyçu
+          </h3>
           <form
             method="post"
             name="user3"
             onSubmit={this.submituserRegistrationForm}
           >
-            <label className="em3"> Adresa e emalit*</label>
+            <Title> Adresa e emalit*</Title>
             <br />
-            <input
+            <Input1
               type="e-mail"
-              className="form3"
               placeholder="Adresa e email"
               name="email"
               value={this.state.fields.email}
               onChange={e => this.handleChange(e)}
             />
-            <div className="error3">{this.state.errors.email}</div>
+            <Error>{this.state.errors.email}</Error>
 
-            <label className="em3"> Fjalekalimi*</label>
+            <Title>Fjalekalimi*</Title>
             <br />
-            <input
+            <Input1
               type="password"
-              className="form3"
               placeholder="Fjalekalimi"
               name="password"
               value={this.state.fields.password}
               onChange={e => this.handleChange(e)}
             />
-            <div className="error3">{this.state.errors.password}</div>
+            <Error >{this.state.errors.password}</Error>
 
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-6 col-md-6">
-                  <button submit="submit" className="buton3">
+                  <Login submit="submit">
                     Kyçu
-                  </button>
+                  </Login>
                 </div>
+                <Find href="/submit1">Keni harruar Fjalekalimin</Find>
               </div>
             </div>
           </form>
-        </div>
-      </div>
+        </Forma>
+      </MainDiv>
     );
   }
 }
+
+const Find = styled.a`
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 7%;
+  &:hover{
+    color: red;
+    text-decoration: none;
+  }
+  
+`
+
+const Error = styled.div`
+  margin-left: 10%;
+  color:red;
+  font-size: 14px;
+`
+
+const MainDiv = styled.div`
+  margin-top: 0px;
+  padding-top: 3%;
+`
+
+
+const Login = styled.button`
+  height: 55px;
+  width: 100px;
+  margin-left: 35%;
+  margin-top: 10%;
+  border-color: #03a9f4;
+  border-radius: 1rem;
+  background-color: #03a9f4;
+  color: white;
+  &:hover {
+    background-color: red;
+  }
+`;
+
+const Input1 = styled.input`
+  height: 100%;
+  width: 75%;
+  padding: 10px 40px;
+  border: 1px solid black;
+  margin-right: 22%;
+  border-radius: 7px;
+  margin-left: 9%;
+`;
+
+const Title = styled.label`
+  margin-left: 9%;
+  font-size: 20px;
+`;
+
+const Forma = styled.div`
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  border-radius: 1.3rem;
+  margin-left: 33%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  width: 40%;
+  height: 57%;
+  box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
+`;
 
 export default connect(
   null,

@@ -4,8 +4,10 @@ import { connect } from "react-redux";
 
 import * as actions from "../../redux/actions";
 import * as requests from "../../services/requests";
-import { images } from "../../config";
-import "./singupform.css";
+
+
+
+import styled from 'styled-components';
 
 class SingUpForm extends Component {
   constructor() {
@@ -126,135 +128,127 @@ class SingUpForm extends Component {
     return formIsValid;
   }
   render() {
+    const foto = {
+      width: "100%",
+      height: "1300px",
+      backgroundImage: "url(" + require("../../assets/images/foto.jpg") + ")"
+    };
     return (
-      <div class="container-fluid">
+      <div style={foto} class="container-fluid">
         <div class="row">
-          <div class="col-lg-4 col-md-4">
-            <div className="profil2">
-              <h1 className="an2">Rregjistrohu</h1>
+          <div>
+            <MainForm >
+              <Titull>Regjistrohu</Titull>
 
               <form
                 method="post"
                 name="user2"
                 onSubmit={this.submituserRegistrationForm}
               >
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Emri"
                   name="name"
                   value={this.state.fields.name}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.name}</div>
+                <Error>{this.state.errors.name}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Emri i perdoruesit"
                   name="user"
                   value={this.state.fields.user}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.user}</div>
+                <Error>{this.state.errors.user}</Error>
 
-                <input
+                <Input
                   type="e-mail"
-                  className="form2"
                   placeholder="Adresa e email"
                   name="email"
                   value={this.state.fields.email}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.email}</div>
+                <Error>{this.state.errors.email}</Error>
 
-                <input
+                <Input
                   type="password"
-                  className="form2"
                   placeholder="Fjalekalimi"
                   name="password"
                   value={this.state.fields.password}
                   onChange={this.handleChange}
                 />
-                <div className="error2">{this.state.errors.password}</div>
+                <Error>{this.state.errors.password}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Mosha"
                   name="age"
                   value={this.state.fields.age}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.age}</div>
+                <Error>{this.state.errors.age}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Gjuha"
                   name="language"
                   value={this.state.fields.language}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.language}</div>
+                <Error>{this.state.errors.language}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Paga"
                   name="wage"
                   value={this.state.fields.wage}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.wage}</div>
+                <Error>{this.state.errors.wage}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Kodi Postar"
                   name="postal_code"
                   value={this.state.fields.postal_code}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.postal_code}</div>
+                <Error>{this.state.errors.postal_code}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Numri i telefonit"
                   name="phone"
                   value={this.state.fields.phone}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.phone}</div>
+                <Error>{this.state.errors.phone}</Error>
 
-                <input
+                <Input
                   type="text"
-                  className="form2"
                   placeholder="Adresa"
                   name="address"
                   value={this.state.fields.address}
                   onChange={this.handleChange}
                 />
                 <br />
-                <div className="error2">{this.state.errors.address}</div>
+                <Error>{this.state.errors.address}</Error>
 
-                <button type="submit" className="buton2">
+                <Button type="submit">
                   Dergo
-                </button>
+                </Button>
               </form>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <img className="foto2" src={images.foto} />
+            </MainForm>
           </div>
         </div>
       </div>
@@ -268,6 +262,61 @@ const mapStateToProps = ({ auth }) => ({
   cities: auth.cities,
   jobs: auth.jobs
 });
+
+const Titull = styled.h1`
+  font-size: 40px;
+  margin-left: 20%;
+  text-transform: uppercase;
+`
+
+
+const Error = styled.div`
+  color: red;
+  font-size: 18px;
+  margin-left: 9%;
+`
+
+const Button = styled.button`
+  height: 55px;
+  width: 100px;;
+  color: white;
+  background-color: #03a9f4;
+  border-radius: 9px;
+  border: solid;
+  border-color: #03a9f4;
+  margin-left: 38%;
+  margin-top: 8%;
+  font-size: 20px;
+  position: inherit;
+  &:hover {
+    background-color: red;
+  }
+`
+
+const MainForm = styled.div`
+  margin-top: 15%;
+  margin-bottom: 10%;
+  padding-top: 4%;
+  padding-bottom: 5%;
+  background-color: white;
+  width: 185%;
+  height: 100%;
+  border: solid black;
+  box-shadow: 0 0 10px 0 rgba(0, 24, 128, 0.1);
+  margin-left: 120%;
+  border-radius: 1.3rem;
+`;
+
+const Input = styled.input`
+  height: 100%;
+  width: 80%;
+  border: 1px solid black;
+  margin-right: 80%;
+  border-radius: 1.3rem;
+  margin-left: 9%;
+  margin-top: 4%;
+  padding: 10px 40px;
+`
 
 export default connect(
   mapStateToProps,

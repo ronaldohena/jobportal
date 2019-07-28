@@ -22,16 +22,16 @@ class Root extends Component {
         <div>
           <Route path="/profil" component={Profil} />
           <Route path="/postim" component={Postim} />
-          <Route path="/home" component={Home} />
+          <Route path="/home" component={Home} />  {/*complete */}
           <Route path="/njoftimepune" component={NjoftimPune} />
-          <Route path="/njoftim" component={Njoftime} />
+          <Route path="/njoftim" component={Njoftime} /> {/*e panevojshme */}
           <Route exact path="/" component={Home} />
-          <Route path="/sing-in" component={SingInForm} />
-          <Route path="/sing-up" component={SingUpForm} />
+          <Route path="/sing-in" component={SingInForm} /> {/*complete */}
+          <Route path="/sing-up" component={SingUpForm} /> {/*complete */}
           <Route path="/back" component={Switch} />
-          <Route path="/forget" component={ForgetPassword} />
-          <Route path="/submit1" component={ForgetLogin} />
-          <Route path="/pershkrimi" component={Pershkrimi} />
+          <Route path="/forget" component={ForgetPassword} /> {/*e panevojshme*/} 
+          <Route path="/submit1" component={ForgetLogin} /> {/*complete */} 
+          <Route path="/pershkrimi" component={Pershkrimi} /> {/*e panevojshme*/}
         </div>
       </Router>
     );
